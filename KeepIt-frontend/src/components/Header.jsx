@@ -10,20 +10,33 @@ import {
   NavigationMenuViewport,
 } from '@/components/ui/navigation-menu'
 import { Button } from './ui/button'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Header = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="w-full flex justify-center py-4">
       <NavigationMenu className="w-screen max-w-none flex justify-around">
         <NavigationMenuList className="">
-          <NavigationMenuItem>KeepIt</NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link to="/">KeepIt</Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Button variant="outline" className="text-xs md:text-[14px]">
+            <Button
+              onClick={() => navigate('/login')}
+              variant="outline"
+              className="text-xs md:text-[14px]"
+            >
               Login
             </Button>
-            <Button className="ml-2 md:ml-4 text-xs md:text-[14px]">
+            <Button
+              onClick={() => navigate('/register')}
+              className="ml-2 md:ml-4 text-xs md:text-[14px]"
+            >
               Register
             </Button>
           </NavigationMenuItem>
