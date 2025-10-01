@@ -1,6 +1,6 @@
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Main from './pages/Main'
+import Home from './pages/Home'
 import { Button } from './components/ui/button'
 import { Routes, Route, Link } from 'react-router-dom'
 import Register from './pages/Register'
@@ -12,7 +12,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Header /> 
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

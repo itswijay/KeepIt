@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '../components/ui/button'
 
-const Main = () => {
+const Home = () => {
   return (
     <>
       
@@ -17,4 +17,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home
