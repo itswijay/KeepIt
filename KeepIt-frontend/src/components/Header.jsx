@@ -21,7 +21,7 @@ const Header = () => {
       <NavigationMenu className="w-screen max-w-none flex justify-around">
         <NavigationMenuList className="">
           <NavigationMenuItem>
-            <Link to="/">KeepIt</Link>
+            <Link to="/" className='text-xl font-semibold'>KeepIt</Link>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
