@@ -17,7 +17,7 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="w-full flex justify-center py-4">
+    <div className="w-full flex justify-center py-4 z-20">
       <NavigationMenu className="w-screen max-w-none flex justify-around">
         <NavigationMenuList className="">
           <NavigationMenuItem>

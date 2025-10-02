@@ -7,7 +7,7 @@ const Register = () => {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [errors, setErrors] = useState({})
+//   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
 
   const fieldLabels = {
@@ -42,7 +42,7 @@ const Register = () => {
 
     } catch (error) {
       console.error('Registration error', error.response.data)
-      setErrors(error.response.data)
+    //   setErrors(error.response.data)
 
       //   toast.error(`${fieldLabels.username}: ${errors.username}`)
       //   toast.error(`${fieldLabels.email}: ${errors.email}`)
@@ -67,8 +67,8 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex-1 flex flex-col items-center text-center">
-        <div className="bg-[#444141]/60 p-8 w-xs md:w-lg rounded-2xl mt-12">
+      <div className="fixed inset-0 flex flex-col justify-center items-center text-center">
+        <div className="bg-[#444141]/60 p-8 w-xs md:w-lg rounded-2xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">
             Create an Account
           </h2>
