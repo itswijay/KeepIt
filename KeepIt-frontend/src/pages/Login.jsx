@@ -1,13 +1,15 @@
 import { Button } from '@/components/ui/button'
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '@/components/AuthProvider'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
+  const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -32,6 +34,7 @@ const Login = () => {
 
       console.log('Login successful!')
       toast.success('Login successful!')
+      setIsLoggedIn(true)
       navigate("/")
 
     } catch (error) {
