@@ -20,7 +20,6 @@ const Login = () => {
       username,
       password,
     }
-    console.log(userData)
 
     try {
       const response = await axios.post(
