@@ -9,7 +9,7 @@ const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
-  const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
+  const {setIsLoggedIn} = useContext(AuthContext)
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -35,7 +35,7 @@ const Login = () => {
       console.log('Login successful!')
       toast.success('Login successful!')
       setIsLoggedIn(true)
-      navigate("/")
+      navigate("/dashboard")
 
     } catch (error) {
       console.error('Invalid credentials', error)

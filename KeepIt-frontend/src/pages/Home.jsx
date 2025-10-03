@@ -15,7 +15,9 @@ const Home = () => {
             Keep Your Notes safe
           </h1>
           {isLoggedIn ? (
-            <h1 className="text-2xl font-bold mt-2">Welcome!</h1>
+                        <Button onClick={() => navigate('/dashboard')} className="mt-4">
+              Explore Now
+            </Button>
           ) : (
             <Button onClick={() => navigate('/login')} className="mt-4">
               Login

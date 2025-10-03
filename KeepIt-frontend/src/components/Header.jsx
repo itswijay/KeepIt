@@ -22,8 +22,8 @@ const Header = () => {
     localStorage.removeItem('accessToken')
     localStorage.removeItem('refreshToken')
     setIsLoggedIn(false)
-    console.log("logged out")
-    toast.success("Logged out")
+    console.log('logged out')
+    toast.success('Logged out')
     navigate('/login')
   }
 
@@ -38,17 +38,30 @@ const Header = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            {isLoggedIn ? (
-              <Button
-                onClick={handleLogout}
-                variant="outline"
-                className="text-xs md:text-[14px]"
-              >
-                Logout
-              </Button>
-            ) : (
-              <>
+          {isLoggedIn ? (
+            <>
+              <NavigationMenuItem>
+                <Button
+                  onClick={() => navigate('/dashboard')}
+                  variant="outline"
+                  className="text-xs md:text-[14px]"
+                >
+                  Dashboard
+                </Button>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Button
+                  onClick={handleLogout}
+                  variant="outline"
+                  className="text-xs md:text-[14px] ml-2"
+                >
+                  Logout
+                </Button>
+              </NavigationMenuItem>
+            </>
+          ) : (
+            <>
+              <NavigationMenuItem>
                 <Button
                   onClick={() => navigate('/login')}
                   variant="outline"
@@ -56,16 +69,17 @@ const Header = () => {
                 >
                   Login
                 </Button>
-
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Button
                   onClick={() => navigate('/register')}
                   className="ml-2 md:ml-4 text-xs md:text-[14px]"
                 >
                   Register
                 </Button>
-              </>
-            )}
-          </NavigationMenuItem>
+              </NavigationMenuItem>
+            </>
+          )}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
