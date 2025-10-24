@@ -28,7 +28,7 @@ const Header = () => {
   }
 
   return (
-    <div className="w-full flex justify-center py-4 z-20">
+    <div className="w-full flex justify-center py-4 z-20 bg-[#444141]/50">
       <NavigationMenu className="w-screen max-w-none flex justify-around">
         <NavigationMenuList className="">
           <NavigationMenuItem>
